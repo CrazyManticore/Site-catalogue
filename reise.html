@@ -64,6 +64,43 @@ ul.menu
 	width: 100%;
 }
 
+.block {
+	background: black;
+    padding: 5px;
+    padding-right: 20px; 
+    border: solid 1px white;
+	opacity: .6;
+}
+
+.split {
+	width: 50%;
+	overflow-x: hidden;
+	z-index: 1;
+	padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+	float:left;
+	left: 0;
+	background-color: #111;
+}
+
+/* Control the right side */
+.right {
+	right: 0;
+	background-color: #111;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
 </style>
 </head>
 <body class="back_scroll">
@@ -76,6 +113,56 @@ ul.menu
 </ul>
 
 
+
+<br>
+<div class="block">
+	<br><br><br>
+	<h1 align="center" style="color: White">Reise, Reise</h1>
+	<br>
+	<h3 style="color: White; padding: 30px; ">/Информация об альбоме/ aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a</h3>
+	<details>
+	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
+		<div class="split left">
+		  <div>
+			<h2 style="color: White; padding: 10px; ">/Текст песни в оригинале/</h2>
+			<p style="color: White; padding: 10px;">Some text.</p>
+		  </div>
+		</div>
+
+		<div class="split right">
+		  <div>
+			<h2 style="color: White; padding: 10px; ">/Перевод песни/</h2>
+			<p style="color: White; padding: 10px;">Some text here too.</p>
+		  </div>
+		</div>
+
+		<div align="center" style="	opacity: .9">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/cqE6XLAHmfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="opacity: .9; padding: 10px"></iframe>
+		</div>
+
+	</details>
+
+	<details>
+	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
+
+
+	</details>
+	<details>
+	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
+
+
+	</details>
+	<details>
+	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
+
+
+	</details>
+	<details>
+	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
+
+
+	</details>
+</div>
 
 </body>
 </html>
