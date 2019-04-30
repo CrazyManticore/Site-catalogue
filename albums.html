@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Rammstein</title>
+<link rel="icon" href="images/favicon.ico">
+
+<style type="text/css">
+
+ul.menu 
+{
+	list-style: none; /*убираем маркеры списка*/ 
+	margin: 0; /*убираем отступы*/
+	padding-left: 0; /*убираем отступы*/
+	margin-top:25px; /*делаем отступ сверху*/
+	background:#4F2811; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+	height: 50px; /*задаем высоту*/
+	opacity: .6;
+}
+
+.menu a 
+{
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	background:#4F2811; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+	color: white; /*меняем цвет ссылок*/
+	padding:0px 20px; /*добавляем отступ*/
+	font-family: arial; /*меняем шрифт*/
+	line-height:50px; /*ровняем меню по вертикали*/
+	display: block; 
+	/*border-right: 1px solid #0000FF;/*#F36262; /*добавляем бордюр справа*/
+	-moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+	-o-transition: all 0.3s 0.01s ease;
+	-webkit-transition: all 0.3s 0.01s ease;
+	font-size: 17px;
+	opacity: .9;
+}
+
+.menu a:hover
+{
+	background:#B06B4A;/*добавляем эффект при наведении*/
+}
+
+.menu li 
+{
+/*Размещаем список горизонтально для реализации меню*/
+	float: none;
+	display: inline-block;
+}
+
+.back_scroll {
+	background-image:url(images/back.jpg);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	border-radius: 5%;
+}
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.container:hover .image {
+	opacity: 0.5;
+}
+
+.container:hover .middle {
+	opacity: 1;
+}
+
+ul.text
+{
+	list-style: none; /*убираем маркеры списка*/
+}
+
+.text a 
+{
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	color: white; /*меняем цвет ссылок*/
+	-moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+	-o-transition: all 0.3s 0.01s ease;
+	-webkit-transition: all 0.3s 0.01s ease;
+}
+
+
+.text {
+	background-color: #4F2811;
+	color: white;
+	font-size: 18px;
+	padding: 4px 8px;
+	border-radius: 20%;
+	opacity: .9;
+}
+
+
+.row > .column {
+	padding: 0 20px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+	float: left;
+	width: 30%;
+}
+
+</style>
+
+</head>
+
+<body class="back_scroll">
+
+
+<ul class="menu">
+	<li><a href="main.html">Главная</a></li>
+	<li><a href="albums.html">Дискография</a></li>
+	<li><a href="about.html">О группе</a></li>
+	<li><a href="gallery.html">Галерея</a></li>
+</ul>
+
+<br><br><br>
+<h1 align="center" style="color: white">Дискография</h1>
+<br>
+
+<div align="center" class="row">
+  <div class="column">
+	<div class="container">
+	  <img src="images/1_Herzeleid.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Herzeleid</a></li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+    <div class="container">
+	  <img src="images/2_Sehnsucht.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Sehnsucht</a></li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+    <div class="column">
+	<div class="container">
+	  <img src="images/3_Mutter.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Mutter</a></li></ul>
+		</div>
+	  </div>
+	</div> 
+  </div>
+</div>
+<br>
+<div align="center" class="row">
+  <div class="column">
+	<div class="container">
+	  <img src="images/4_Reise,_Reise.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Reise, Reise</a></li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="container">
+	  <img src="images/5_Rosenrot.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Rosenrot</a></li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="column">
+	<div class="container">
+	  <img src="images/6_Liebe_Ist_Fur_Alle_Da.jpg" class="image" style="width:100%">
+	  <div class="middle">
+		<div class="text">
+			<ul class="text"><li><a href="album.html">Liebe Ist Fur Alle Da</a></li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+</body>
+
+</html>
