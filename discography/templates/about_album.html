@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿{% load staticfiles %}
+<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
 <head>
@@ -6,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Rammstein</title>
-<link rel="icon" href="images/favicon.ico">
+<link rel="icon" href="{% static 'img/favicon.ico' %}">
 
 <style type="text/css">
 
@@ -51,7 +52,7 @@ ul.menu
 }
 
 .back_scroll {
-	background-image:url(images/back.jpg);
+	background-image:url({% static 'img/back.jpg' %});
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 }
@@ -106,10 +107,10 @@ ul.menu
 <body class="back_scroll">
 
 <ul class="menu">
-	<li><a href="main.html">Главная</a></li>
-	<li><a href="albums.html">Дискография</a></li>
-	<li><a href="about.html">О группе</a></li>
-	<li><a href="gallery.html">Галерея</a></li>
+	<li><a href="{% url 'main' %}">Главная</a></li>
+	<li><a href="{% url 'albums' %}">Дискография</a></li>
+	<li><a href="{% url 'about' %}">О группе</a></li>
+	<li><a href="{% url 'gallery' %}">Галерея</a></li>
 </ul>
 
 
@@ -117,51 +118,31 @@ ul.menu
 <br>
 <div class="block">
 	<br><br><br>
-	<h1 align="center" style="color: White">Rosenrot</h1>
+	<h1 align="center" style="color: White">{{album.name}}</h1>
 	<br>
-	<h3 style="color: White; padding: 30px; ">/Информация об альбоме/ aaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa a</h3>
+	<h3 style="color: White; padding: 30px; ">{{album.description}}</h3>
+	{% for song in songs %}
 	<details>
-	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
-		<div class="split left">
-		  <div>
-			<h2 style="color: White; padding: 10px; ">/Текст песни в оригинале/</h2>
-			<p style="color: White; padding: 10px;">Some text.</p>
-		  </div>
-		</div>
+	<summary style="color: White; padding: 5px 0 10px 10px;">{{song.name}}</summary>
+	<div class="split left">
+	  <div>
+		<h2 style="color: White; padding: 10px; ">/Текст песни в оригинале/</h2>
+		<p style="color: White; padding: 10px;">{{song.text|linebreaksbr}}</p>
+	  </div>
+	</div>
 
-		<div class="split right">
-		  <div>
-			<h2 style="color: White; padding: 10px; ">/Перевод песни/</h2>
-			<p style="color: White; padding: 10px;">Some text here too.</p>
-		  </div>
-		</div>
+	<div class="split right">
+	  <div>
+		<h2 style="color: White; padding: 10px; ">/Перевод песни/</h2>
+		<p style="color: White; padding: 10px;">{{song.translate|linebreaksbr}}</p>
+	  </div>
+	</div>
 
-		<div align="center" style="	opacity: .9">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/cqE6XLAHmfY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="opacity: .9; padding: 10px"></iframe>
-		</div>
-
+	<div align="center" style="	opacity: .9">
+		<iframe width="560" height="315" src={{song.video_url}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="opacity: .9; padding: 10px"></iframe>
+	</div>
 	</details>
-
-	<details>
-	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
-
-
-	</details>
-	<details>
-	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
-
-
-	</details>
-	<details>
-	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
-
-
-	</details>
-	<details>
-	<summary style="color: White; padding: 5px 0 10px 10px;">/Название песни/</summary>
-
-
-	</details>
+	{% endfor %}
 </div>
 
 </body>
