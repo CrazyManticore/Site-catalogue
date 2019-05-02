@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
+﻿{% load staticfiles %}
+<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
 
 <html>
 <head>
@@ -6,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>Rammstein</title>
-<link rel="icon" href="images/favicon.ico">
+<link rel="icon" href="{% static 'img/favicon.ico' %}">
 
 <style type="text/css">
 
@@ -51,7 +52,7 @@ ul.menu
 }
 
 .back_scroll {
-	background-image:url(images/back.jpg);
+	background-image:url({% static 'img/back.jpg' %});
 	background-repeat: no-repeat;
 	background-attachment:fixed;
 }
@@ -136,81 +137,37 @@ ul.text
 <body class="back_scroll">
 
 <ul class="menu">
-	<li><a href="main.html">Главная</a></li>
-	<li><a href="albums.html">Дискография</a></li>
-	<li><a href="about.html">О группе</a></li>
-	<li><a href="gallery.html">Галерея</a></li>
+	<li><a href="{% url 'main' %}">Главная</a></li>
+	<li><a href="{% url 'albums' %}">Дискография</a></li>
+	<li><a href="{% url 'about' %}">О группе</a></li>
+	<li><a href="{% url 'gallery' %}">Галерея</a></li>
 </ul>
 
 <br><br><br>
 <h1 align="center" style="color: white">Дискография</h1>
 <br>
 
+
+
+{% for i in albums %}
+
 <div align="center" class="row">
-  <div class="column">
-	<div class="container">
-	  <img src="images/1_Herzeleid.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="herzeleid.html">Herzeleid</a></li></ul>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="column">
-    <div class="container">
-	  <img src="images/2_Sehnsucht.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="sehnsucht.html">Sehnsucht</a></li></ul>
-		</div>
-	  </div>
-	</div>
-  </div>
-    <div class="column">
-	<div class="container">
-	  <img src="images/3_Mutter.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="mutter.html">Mutter</a></li></ul>
-		</div>
-	  </div>
-	</div> 
-  </div>
+		{% for album in i %}
+				<div class="column">
+						<div class="container">
+							<img src={{album.image.url}} class="image" style="width:100%">
+							<div class="middle">
+							<div class="text">
+								<ul class="text"><li><a href="{% url 'about-album' album.name %}">{{album.name}}</a></li></ul>
+							</div>
+							</div>
+						</div>
+				</div>
+			{% endfor %}
+		
 </div>
 <br>
-<div align="center" class="row">
-  <div class="column">
-	<div class="container">
-	  <img src="images/4_Reise,_Reise.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="reise.html">Reise, Reise</a></li></ul>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="column">
-	<div class="container">
-	  <img src="images/5_Rosenrot.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="rosenrot.html">Rosenrot</a></li></ul>
-		</div>
-	  </div>
-	</div>
-  </div>
-  <div class="column">
-	<div class="container">
-	  <img src="images/6_Liebe_Ist_Fur_Alle_Da.jpg" class="image" style="width:100%">
-	  <div class="middle">
-		<div class="text">
-			<ul class="text"><li><a href="lifad.html">Liebe Ist Fur Alle Da</a></li></ul>
-		</div>
-	  </div>
-	</div>
-  </div>
-</div>
+{% endfor %}
 
 </body>
 </html>
