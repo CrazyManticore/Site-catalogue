@@ -155,7 +155,7 @@ ul.text
 		{% for album in i %}
 				<div class="column">
 						<div class="container">
-							<img src={{album.image.url}} class="image" style="width:100%">
+							<img src="{{album.image}}" class="image" style="width:100%"> 
 							<div class="middle">
 							<div class="text">
 								<ul class="text"><li><a href="{% url 'about-album' album.name %}">{{album.name}}</a></li></ul>
