@@ -1,0 +1,89 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Rammstein</title>
+<link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+<style type="text/css">
+
+ul.menu 
+{
+	list-style: none; /*убираем маркеры списка*/
+	margin: 0; /*убираем отступы*/
+	padding-left: 0; /*убираем отступы*/
+	margin-top:25px; /*делаем отступ сверху*/
+	background:#4F2811; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+	height: 50px; /*задаем высоту*/
+	opacity: .6;
+}
+
+.menu a 
+{
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	background:#4F2811; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+	color: white; /*меняем цвет ссылок*/
+	padding:0px 20px; /*добавляем отступ*/
+	font-family: arial; /*меняем шрифт*/
+	line-height:50px; /*ровняем меню по вертикали*/
+	display: block; 
+	 /*border-right: 1px solid #0000FF;/*#F36262; /*добавляем бордюр справа*/
+	-moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+	-o-transition: all 0.3s 0.01s ease;
+	-webkit-transition: all 0.3s 0.01s ease;
+	font-size: 17px;
+	opacity: .9;
+}
+
+.menu a:hover
+{
+	background:#B06B4A;/*добавляем эффект при наведении*/
+}
+
+.menu li 
+{
+	/*Размещаем список горизонтально для реализации меню*/
+	float: none;
+	display: inline-block;
+}
+
+.back_scroll {
+	background-image:url({% static 'img/back.jpg' %});
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+    background-size: cover;
+}
+
+.text {
+	text-align:  center;
+	color: #D9D9D9;
+	font-size: 18px;
+	font-family: arial;
+	width: 100%;
+}
+
+</style>
+</head>
+<body class="back_scroll">
+
+<ul class="menu">
+	<li><a href="{% url 'main' %}">Главная</a></li>
+	<li><a href="{% url 'albums' %}">Дискография</a></li>
+	<li><a href="{% url 'about' %}">О группе</a></li>
+	<li><a href="{% url 'gallery' %}">Галерея</a></li>
+</ul>
+
+<p></p><img src="{% static 'img/main.png' %}" width="100%"></p>
+
+<br>
+<div class="text">
+     <p>Данный сайт посвящен немецкому коллективу Rammstein. Вы можете ознакомиться с переводами песен, 
+     историей группы, видеоклипами и фотографиями.</p>
+</div>
+
+</body>
+</html>
