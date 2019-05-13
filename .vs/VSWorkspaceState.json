@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\discography",
+    "\\discography\\templates",
     "\\templates"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\templates\\gallery.html",
   "PreviewInSolutionExplorer": false
 }
