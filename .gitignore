@@ -1,6 +1,5 @@
 __pycache__/
 .vs/
-.vs
 Procfile
 runtime.txt
 db.sqlite3
