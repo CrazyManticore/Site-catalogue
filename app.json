@@ -1,0 +1,8 @@
+{
+  "name": "Start on Heroku: Site Catalog on Python",
+  "description": "Site catalog",
+  "repository": "https://github.com/algorithm-ssau/Site-catalogue",
+  "logo": "https://e003241e1ca22fe3a801-e6bf09af38ee59e24e7cffd16c43a1d9.ssl.cf2.rackcdn.com/89-python-logo.png",
+  "keywords": ["python", "django", "heroku"],
+  "image": "heroku/python"
+}

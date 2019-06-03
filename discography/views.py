@@ -28,4 +28,3 @@ def gallery(request):
     all_images = GalleryImage.objects.all()
     count = len(all_images)
     return render(request, 'gallery.html', {'images': all_images, 'count': count})
-    
