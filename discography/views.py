@@ -1,7 +1,6 @@
 import math
 from django.shortcuts import render, get_object_or_404
-from discography.models import Album, Song
-
+from discography.models import Album, Song, GalleryImage
 def main(request):
     return render(request, 'main.html', {})
 
@@ -26,5 +25,6 @@ def about(request):
     return render(request, 'about.html', {})
 
 def gallery(request):
-    return render(request, 'gallery.html', {})
-    
+    all_images = GalleryImage.objects.all()
+    count = len(all_images)
+    return render(request, 'gallery.html', {'images': all_images, 'count': count})
