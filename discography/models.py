@@ -18,3 +18,9 @@ class Song(models.Model):
 
     def __str__(self):
         return self.name
+
+class GalleryImage(nodels.Model)
+    image = models.URLField(max_length=300,verbose_name='Ссылка на изоражение', default='')
+
+    def __str__(self):
+        return self.name
