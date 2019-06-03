@@ -17,7 +17,7 @@ ul.menu
 	margin: 0; /*убираем отступы*/
 	padding-left: 0; /*убираем отступы*/
 	margin-top:25px; /*делаем отступ сверху*/
-	background:#4F2811; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+	background:#993333; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
 	height: 50px; /*задаем высоту*/
 	opacity: .6;
 }
@@ -25,13 +25,12 @@ ul.menu
 .menu a 
 {
 	text-decoration: none; /*убираем подчеркивание текста ссылок*/
-	background:#4F2811; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+	background:#993333; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
 	color: white; /*меняем цвет ссылок*/
 	padding:0px 20px; /*добавляем отступ*/
 	font-family: arial; /*меняем шрифт*/
 	line-height:50px; /*ровняем меню по вертикали*/
 	display: block; 
-	/*border-right: 1px solid #0000FF;/*#F36262; /*добавляем бордюр справа*/
 	-moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
 	-o-transition: all 0.3s 0.01s ease;
 	-webkit-transition: all 0.3s 0.01s ease;
@@ -41,7 +40,7 @@ ul.menu
 
 .menu a:hover
 {
-	background:#B06B4A;/*добавляем эффект при наведении*/
+	background:#C65353;/*добавляем эффект при наведении*/
 }
 
 .menu li 
@@ -67,107 +66,107 @@ ul.menu
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 img {
-  vertical-align: middle;
+	vertical-align: middle;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .container {
-  position: relative;
+	position: relative;
 }
 
 /* Hide the images by default */
 .mySlides {
-  display: none;
-  text-align: center;
+	display: none;
+	text-align: center;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* Next & previous buttons */
 .prev,
 .next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
 }
 
 /* Container for image text */
 .caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+	text-align: center;
+	background-color: #222;
+	padding: 2px 16px;
+	color: white;
 }
 
 
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .row {
-  overflow-x: scroll;
-  height: 220px;
-  width: auto;
+	overflow-x: scroll;
+	height: 220px;
+	width: auto;
 }
 
 .inner {
-  width: 10000px; 
+	width: 10000px; 
 }
 
 /* Six columns side by side */
 .column {
-  float: left;
-  width: 200px;
-  height: 200px;
+	float: left;
+	width: 200px;
+	height: 200px;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-  opacity: 0.6;
+	opacity: 0.6;
 }
 
 .active,
 .demo:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 </style>
@@ -219,11 +218,11 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+	showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+	showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
